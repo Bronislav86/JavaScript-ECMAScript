@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+	<script>
+		function createCalculator(initialValue) {
+			let value = initialValue;
+
+			return {
+				add(num) {
+					value += num;
+				},
+				subtract(num) {
+					value -= num;
+				},
+				getValue() {
+					return value;
+				},
+			};
+		}
+
+		const calculator = createCalculator(10);
+		console.log(calculator.add(5)); //15
+		console.log(calculator.subtract(2)); //13
+		console.log(calculator.subtract(5)); //13
+		console.log(calculator.getValue()); //13
+	</script>
+</html>
