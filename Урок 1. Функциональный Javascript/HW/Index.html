@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+//----------------------------------------------1) 
+ const arr = [1, 5, 7, 9];
+undefined
+const findMin = Math.min(...arr);
+undefined
+console.log(findMin);
+
+//------------------------------------------------2)
+function createCounter() {
+    let counter = 0;
+    return {
+        increment(){
+        counter++;
+        },
+        decrement(){
+            counter--;
+        },
+        getValue(){
+            return counter;
+        }
+    }
+};
+undefined
+const counter = createCounter();
+undefined
+counter.increment();
+undefined
+counter.increment();
+undefined
+counter.increment();
+undefined
+counter.decrement();
+undefined
+counter.getValue();
+
+//-------------------------------3)
+function findElementByClass(root, className){
+    if (root.classList.contains(className)) {
+        return root;
+    }
+    for (let i = 0; i < root.children.lenght; i++) {
+        const found = findElementByClass(root.children[i], className);
+        if (found) {
+            return found;
+        }
+    }
+    return null;
+};
+const rootElement = document.getElementById('search-result-fast-nav');
+const targetElement = findElementByClass(rootElement, 'my-class');
+
+</script>
+</html>
