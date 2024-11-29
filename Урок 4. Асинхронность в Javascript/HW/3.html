@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="block">Контент</div>
+	</body>
+	<script>
+		function changeBorderDelayed(elementClass, delay) {
+			const element = document.querySelector(elementClass);
+			setTimeout(() => {
+				element.style.border = "1px solid red";
+			}, delay);
+		}
+
+		function changeSizeDelayed(elementClass, delay) {
+			const element = document.querySelector(elementClass);
+			setTimeout(() => {
+				element.style.maxWidth = "100px";
+			}, delay);
+		}
+
+		changeBorderDelayed(".block", 3000);
+		changeSizeDelayed(".block", 4000);
+	</script>
+</html>
